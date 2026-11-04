@@ -1,12 +1,11 @@
-/* Shared brand tokens. Change these after you agree on your brand direction.
-   Both the storefront and the live style guide use this file. */
+/* Shared UNFORM tokens. The storefront and live style guide use this file. */
 :root {
-  --color-paper: #f6f5f0;
-  --color-ink: #171a18;
-  --color-muted: #5a615b;
-  --color-line: #d1d5cc;
-  --color-accent: #e3ef56;
-  --color-soft: #e8eae1;
+  --color-paper: #101010;
+  --color-ink: #f4f1ea;
+  --color-muted: #b8b2aa;
+  --color-line: #393631;
+  --color-accent: #d8ff3e;
+  --color-soft: #1d1b1a;
   --color-white: #fff;
   --color-danger: #992e28;
   --font-body:
@@ -186,6 +185,7 @@ p + p {
   gap: 1.5rem;
   padding: 0.8rem 3rem;
   background: var(--color-accent);
+  color: #101010;
   font-size: 0.73rem;
   line-height: 1.5;
 }
@@ -203,6 +203,11 @@ p + p {
   border-bottom: 1px solid var(--color-line);
 }
 
+.site-header,
+.site-footer {
+  border-color: var(--color-line);
+}
+
 .brand-link {
   display: inline-block;
   flex-shrink: 0;
@@ -211,6 +216,10 @@ p + p {
 .wordmark {
   width: 150px;
   height: auto;
+}
+
+.site-header .wordmark {
+  filter: invert(1);
 }
 
 .main-nav {
@@ -256,15 +265,21 @@ p + p {
 
 .product-section {
   display: grid;
-  grid-template-columns: 1.13fr 1fr;
-  gap: clamp(3rem, 7vw, 8rem);
-  padding-block: var(--space-5) 5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding-block: 4rem 6rem;
   align-items: start;
+}
+
+.product-section > * {
+  min-width: 0;
 }
 
 .product-visual {
   position: relative;
-  background: var(--color-soft);
+  background: #e9e7e1;
+  color: #101010;
+  overflow: hidden;
 }
 
 .visual-label {
@@ -307,19 +322,28 @@ p + p {
 
 .product-information h1 {
   margin-top: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  font-size: clamp(3rem, 5vw, 5rem);
+  text-transform: uppercase;
 }
 
 .product-intro {
-  font-size: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
   line-height: 1.5;
   margin-top: 1.8rem;
-  letter-spacing: -0.025em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .product-description {
-  margin-top: 0.6rem;
-  font-size: 0.88rem;
-  max-width: 430px;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 380px;
 }
 
 .price-row {
@@ -458,7 +482,7 @@ legend {
 
 .button-primary:hover {
   background: var(--color-accent);
-  color: var(--color-ink);
+  color: #101010;
 }
 
 .button-secondary {
@@ -468,6 +492,12 @@ legend {
 
 .button-secondary:hover {
   background: var(--color-soft);
+}
+
+.button:focus-visible,
+.nav-link:focus-visible,
+.bag-link:focus-visible {
+  outline-color: var(--color-accent);
 }
 
 .add-button {
@@ -569,6 +599,7 @@ legend {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem 3rem;
   background: var(--color-accent);
+  color: #101010;
   padding: 2.7rem 3rem 3rem;
   margin-block: 1rem 4rem;
 }
@@ -584,6 +615,124 @@ legend {
 
 .starter-next .button {
   margin-top: 1.6rem;
+}
+
+.starter-next .eyebrow,
+.starter-next .button-secondary {
+  color: #101010;
+}
+
+.hero-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero-preview {
+  border: 1px solid var(--color-line);
+  background: var(--color-soft);
+  padding: 1rem;
+}
+
+.hero-preview h3 {
+  margin-top: 1rem;
+}
+
+.hero-preview-copy {
+  margin-top: 0.6rem;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+.hero-preview-visual {
+  position: relative;
+  min-height: 270px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.hero-preview-visual img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+}
+
+.modern-preview {
+  background: #e9e7e1;
+  color: #101010;
+}
+
+.modern-preview .preview-title {
+  align-self: start;
+  font-size: clamp(1.7rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.modern-preview .preview-meta {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+}
+
+.postmodern-preview {
+  background: var(--color-ink);
+  color: #101010;
+  border: 8px solid var(--color-accent);
+}
+
+.postmodern-preview::before {
+  content: "UNFORM";
+  position: absolute;
+  top: 0.6rem;
+  right: -0.8rem;
+  color: var(--color-accent);
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-style: italic;
+  transform: rotate(7deg);
+}
+
+.postmodern-preview .preview-title {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.7rem;
+  z-index: 1;
+  color: var(--color-accent);
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+
+.postmodern-preview img {
+  margin-inline: auto;
+  transform: rotate(3deg);
+}
+
+.preview-annotation {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
+.preview-annotation strong {
+  color: var(--color-ink);
 }
 
 .site-footer {
@@ -690,7 +839,7 @@ legend {
   display: inline-block;
   padding: 0.3rem 0.55rem;
   background: var(--color-accent);
-  color: var(--color-ink);
+  color: #101010;
   font-family: var(--font-mono);
   font-size: 0.6rem;
   line-height: 1.4;
@@ -1058,6 +1207,14 @@ legend {
     padding-block: 1.5rem 3rem;
   }
 
+  .hero-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-preview-visual {
+    min-height: 240px;
+  }
+
   .product-visual {
     max-width: 600px;
     width: 100%;
@@ -1074,7 +1231,7 @@ legend {
   }
 
   .product-information h1 {
-    font-size: clamp(4.2rem, 13vw, 7rem);
+    font-size: clamp(3rem, 13vw, 5rem);
     margin-top: 1rem;
   }
 

@@ -21,6 +21,7 @@
   align-items: center;
   gap: 1.5rem;
   background: var(--color-accent);
+  color: #101010;
   padding: 1.6rem 2rem;
 }
 
@@ -316,6 +317,7 @@
 
 .coach-quote {
   background: var(--color-white);
+  color: #101010;
   border: 1px solid var(--color-line);
   margin: 0;
   padding: 2rem;
@@ -326,7 +328,7 @@
 }
 
 .coach-quote p {
-  color: var(--color-ink);
+  color: #101010;
   font-size: 1.3rem;
   line-height: 1.5;
   letter-spacing: -0.03em;
@@ -336,7 +338,7 @@
   font-family: var(--font-mono);
   font-size: 0.6rem;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: #4a4640;
   margin-top: 1.5rem;
 }
 
