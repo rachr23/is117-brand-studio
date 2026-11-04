@@ -83,3 +83,6 @@ After `BRAND-001`, choose **one** next cycle with less guidance: perhaps a usefu
 After you approve keeping the checked change and it is merged into `main`, you can publish it. Let the agent guide you through your repository's **Settings → Pages → Source → GitHub Actions**, then **Actions → Check and publish → Run workflow** on `main`. Open the deployment URL reported by that run. Later pushes to `main` publish automatically after checks pass. Until Pages is configured, the workflow checks the project and skips publishing successfully; first setup does not require deployment.
 
 If Settings is missing or shows a 404, sign into the owning GitHub account in that browser. Terminal SSH authentication does not sign the browser in.
+## BRAND-001 Submission
+
+Merged pull request: https://github.com/rachr23/is117-brand-studio/pull/3
