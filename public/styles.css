@@ -1452,3 +1452,28 @@ legend {
     animation: none !important;
   }
 }
+
+/* UNFORM editorial campaign: original layout with clearly credited styling references. */
+.campaign{display:grid;grid-template-columns:1.07fr 1fr .68fr;min-height:650px;gap:0;position:relative;border-bottom:1px solid var(--color-line);overflow:hidden;background:#151515}
+.campaign-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(2rem,5vw,6rem);background:#151515;min-width:0}
+.campaign-kicker,.campaign-edition,.campaign-photo figcaption,.campaign-credit{font:600 .67rem/1.5 var(--font-mono);letter-spacing:.12em;text-transform:uppercase}
+.campaign-kicker{color:var(--color-accent);margin-bottom:2.1rem}
+.campaign-copy h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(3.6rem,6.5vw,8rem);font-weight:900;line-height:.86;letter-spacing:-.095em;white-space:nowrap}
+.campaign-copy h1 em{font-style:normal;color:var(--color-accent)}
+.campaign-copy p{margin-top:2.4rem;max-width:390px;color:#d0cbc5;font-size:.97rem;line-height:1.8}
+.campaign-cta{display:inline-flex;align-items:center;gap:2rem;padding:1.1rem 1.3rem;background:var(--color-accent);color:#101010;text-decoration:none;font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;margin-top:2rem;transition:transform .2s ease}
+.campaign-cta:hover{transform:translateY(-3px)}
+.campaign-edition{margin-top:4rem;color:#8e8b86}
+.campaign-photo{position:relative;margin:0;min-width:0;min-height:650px;overflow:hidden;background:#484640}
+.campaign-photo img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center;filter:grayscale(100%) contrast(1.08)}
+.campaign-photo-one img{object-position:55% center}
+.campaign-photo-two img{object-position:center}
+.campaign-photo figcaption{position:absolute;bottom:1.4rem;left:1.3rem;padding:.35rem .55rem;color:#fff;background:rgba(0,0,0,.65)}
+.campaign-credit{position:absolute;bottom:.5rem;right:.9rem;z-index:3;font-size:.48rem;letter-spacing:.02em;text-transform:none;color:white;background:#111b;padding:.25rem .5rem;max-width:44%;text-align:right}
+.campaign-credit a{color:var(--color-accent)}
+.product-section{padding-top:5.5rem}
+.product-visual{background:#dedbd3}
+.product-information h1{font-size:clamp(3rem,5vw,5.5rem)}
+@media(width <= 1100px){.campaign{grid-template-columns:1.1fr 1fr}.campaign-photo-two{display:none}.campaign-copy h1{font-size:clamp(3rem,7vw,6rem)}.campaign-credit{max-width:54%}}
+@media(width <= 760px){.campaign{grid-template-columns:1fr 1fr;min-height:0}.campaign-copy{grid-column:1/-1;min-height:420px;padding:2.1rem 1.4rem}.campaign-copy h1{font-size:clamp(3.3rem,13vw,6rem)}.campaign-copy p{margin-top:1.6rem}.campaign-edition{margin-top:2.6rem}.campaign-photo,.campaign-photo-two{display:block;min-height:330px}.campaign-credit{position:static;max-width:none;grid-column:1/-1;text-align:left;padding:.65rem 1rem}.product-section{padding-top:2rem}}
+@media(width <= 420px){.campaign-photo,.campaign-photo-two{min-height:250px}.campaign-copy h1{font-size:clamp(2.9rem,13vw,4.5rem)}}
