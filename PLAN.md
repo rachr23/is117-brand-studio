@@ -6,20 +6,20 @@
 
 Primary audience hypothesis: Alex, a college-age streetwear enthusiast who wants a distinctive white T-shirt and clear sizing. Secondary audience hypothesis: Jordan, a budget-conscious student who wants straightforward price and product information. These are assumptions, not validated customer research.
 
-| Approach | Design and audience effect | Trade-off |
-| --- | --- | --- |
-| Modernist streetwear | Restrained grid, simple hierarchy and clear product information make sizing and shopping easy to scan. | May feel too conventional for UNFORM's rebellious identity. |
+| Approach                              | Design and audience effect                                                                                 | Trade-off                                                               |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Modernist streetwear                  | Restrained grid, simple hierarchy and clear product information make sizing and shopping easy to scan.     | May feel too conventional for UNFORM's rebellious identity.             |
 | Postmodernist streetwear **(chosen)** | Dark background, oversized typography, high contrast, asymmetry and UNFORM wordmark express individuality. | Experimental layouts must not hide sizing, prices or checkout controls. |
 
 **Decision:** Preserve the existing postmodernist design and shared live style guide. Brand promise: **Different by Design**. Voice: bold, minimal, rebellious. Outlaw archetype. Product remains the same white T-shirt; do not assert unverified material, fit, shipping or sustainability claims.
 
 ## User stories, essential features and observable checks
 
-| Story | Essential feature | Observable check |
-| --- | --- | --- |
-| As Alex, I want to see the shirt and its details so I can judge whether it matches my style. | Clear product image, visible sample price and concise description. | On desktop and narrow mobile, product and details remain visible and readable without horizontal scrolling. |
-| As Alex, I want to choose a size so I can add the intended variant. | Accessible size selector and helpful validation. | Add without size: helpful message, no item added. Select size: bag shows that exact size. |
-| As Jordan, I want to review and change my bag before checkout so I can control my total. | Bag summary with item, selected size, quantity, subtotal and remove/edit action. | Add then remove an item; bag count and total update correctly. |
+| Story                                                                                                 | Essential feature                                                                             | Observable check                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| As Alex, I want to see the shirt and its details so I can judge whether it matches my style.          | Clear product image, visible sample price and concise description.                            | On desktop and narrow mobile, product and details remain visible and readable without horizontal scrolling.                                                          |
+| As Alex, I want to choose a size so I can add the intended variant.                                   | Accessible size selector and helpful validation.                                              | Add without size: helpful message, no item added. Select size: bag shows that exact size.                                                                            |
+| As Jordan, I want to review and change my bag before checkout so I can control my total.              | Bag summary with item, selected size, quantity, subtotal and remove/edit action.              | Add then remove an item; bag count and total update correctly.                                                                                                       |
 | As a shopper, I want to complete a **simulated** checkout so I can see a confirmation without paying. | Demo checkout form, server-side validation, SQLite order persistence and confirmation number. | Submit valid sample details, receive a demo confirmation, restart the server and retrieve the saved order from SQLite. Invalid or empty inputs do not create orders. |
 
 ## Technical plan and boundary
